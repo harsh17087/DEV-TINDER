@@ -1,0 +1,126 @@
+/* Global Reset & Base Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f7f5f6;
+  color: #888888;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 40px 20px;
+}
+
+/* Container Box */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Section Title */
+.title {
+  font-size: 2rem;
+  font-weight: 300;
+  color: #555555;
+  margin-bottom: 15px;
+}
+
+/* Underline styling */
+.divider {
+  width: 80px;
+  height: 2px;
+  background: linear-gradient(to right, #e0a3a8 50%, #8ca1ce 50%);
+  margin: 0 auto 50px auto;
+  border-radius: 2px;
+}
+
+/* Responsive Grid Layout */
+.features-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px 30px;
+}
+
+/* Feature Card Base Style */
+.feature-card {
+  flex: 0 0 calc(33.333% - 30px); /* 3 Columns on Desktop */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 10px;
+}
+
+/* Circle Icon Styling */
+.icon-circle {
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+  border: 1px solid #e3dcde;
+  box-shadow: inset 0 0 0 6px #f7f5f6, inset 0 0 0 7px #e3dcde; /* Double circular border effect */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 25px;
+  background-color: transparent;
+}
+
+.icon-circle i {
+  font-size: 3.2rem;
+}
+
+/* Custom Colors for Icons */
+.feature-card:nth-child(1) .icon-circle i {
+  color: #e59097; /* Soft Red / Pink */
+}
+
+.feature-card:nth-child(2) .icon-circle i {
+  color: #9283ba; /* Purple */
+}
+
+.feature-card:nth-child(3) .icon-circle i {
+  color: #7da5d8; /* Light Blue */
+}
+
+/* Text Styling inside Cards */
+.feature-title {
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: #666666;
+  margin-bottom: 15px;
+}
+
+.feature-desc {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #888888;
+  max-width: 320px;
+}
+
+/* ================= Responsive Media Queries ================= */
+
+/* Tablet View: Maximum 2 columns */
+@media screen and (max-width: 992px) {
+  .feature-card {
+    flex: 0 0 calc(50% - 30px); /* 2 Columns */
+  }
+}
+
+/* Mobile View: 1 column stacked */
+@media screen and (max-width: 600px) {
+  .feature-card {
+    flex: 0 0 100%; /* 1 Column */
+  }
+  
+  .title {
+    font-size: 1.75rem;
+  }
+}
